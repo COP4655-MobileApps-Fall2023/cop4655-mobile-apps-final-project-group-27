@@ -20,7 +20,7 @@
                                 <rect key="frame" x="16" y="281.66666666666669" width="361" height="289.00000000000006"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NutriTrack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-YP-NBZ">
-                                        <rect key="frame" x="54.666666666666686" y="0.0" width="251.66666666666663" height="102.66666666666667"/>
+                                        <rect key="frame" x="54.666666666666671" y="0.0" width="251.66666666666663" height="102.66666666666667"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="64"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -82,6 +82,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zZD-Vp-KK2"/>
+                    <connections>
+                        <outlet property="password_field" destination="ndo-ka-yjD" id="DWS-rt-TQj"/>
+                        <outlet property="username_field" destination="aQM-N8-b6l" id="YcV-qJ-1gN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,6 +136,9 @@
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                                <connections>
+                                                    <action selector="SignUp_Button:" destination="91r-ho-Jch" eventType="touchUpInside" id="EWi-Ww-JoL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -152,6 +159,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="Tkt-Pw-Pbf"/>
+                    <connections>
+                        <outlet property="Email_Field" destination="wL8-le-4UN" id="MSu-0S-Pbj"/>
+                        <outlet property="Password_Field" destination="FLN-Vc-ob5" id="C2Q-Rj-bd8"/>
+                        <outlet property="ReEnter_Password_Field" destination="bOm-WP-MqV" id="8Yv-lM-Y5L"/>
+                        <outlet property="Username_Field" destination="Eyx-Oq-8p0" id="hjt-5q-0hR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ek6-UU-mv1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

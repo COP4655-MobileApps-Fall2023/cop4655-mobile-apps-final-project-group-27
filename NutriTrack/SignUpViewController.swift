@@ -9,6 +9,12 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var Email_Field: UITextField!
+    @IBOutlet weak var Username_Field: UITextField!
+    @IBOutlet weak var Password_Field: UITextField!
+    @IBOutlet weak var ReEnter_Password_Field: UITextField!
+    @IBAction func SignUp_Button(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
