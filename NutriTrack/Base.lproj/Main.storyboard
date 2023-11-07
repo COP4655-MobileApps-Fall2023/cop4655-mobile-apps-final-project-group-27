@@ -91,6 +91,90 @@
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
         </scene>
+        <!--History-->
+        <scene sceneID="elj-Q7-D7B">
+            <objects>
+                <viewController id="KIL-Vz-kOw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="utg-6f-cJa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="W1S-uf-s5C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="History" image="clock.fill" catalog="system" id="k6c-UE-uTE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCh-ZY-fRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-808" y="1987"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="jD2-jd-Cvn">
+            <objects>
+                <viewController id="PEa-1r-LPv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6IA-Ts-vVL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aWP-pT-J5J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="sXt-7m-eWK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QP9-Bd-oQ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="395" y="2024"/>
+        </scene>
+        <!--Food-->
+        <scene sceneID="uDJ-PL-KkF">
+            <objects>
+                <viewController id="OqI-9Y-HHR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PGy-f9-fDT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DAf-5L-3td"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Food" image="takeoutbag.and.cup.and.straw.fill" catalog="system" id="tsk-kJ-eIA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNA-vF-oJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="395" y="1290"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="qd5-2v-dQh">
+            <objects>
+                <viewController id="JTC-1v-52o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uLE-fI-CAy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wTF-Ud-yfo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" id="RSD-XI-WSd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfQ-5H-HDj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="395" y="642"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="smk-bb-P7G">
+            <objects>
+                <tabBarController id="1ik-Jg-Lxp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="msx-sc-rkN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JTC-1v-52o" kind="relationship" relationship="viewControllers" id="8iZ-QK-px7"/>
+                        <segue destination="OqI-9Y-HHR" kind="relationship" relationship="viewControllers" id="XFb-oR-BLg"/>
+                        <segue destination="PEa-1r-LPv" kind="relationship" relationship="viewControllers" id="U3V-vb-VaI"/>
+                        <segue destination="KIL-Vz-kOw" kind="relationship" relationship="viewControllers" id="azA-iz-5ao"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="je8-CF-jGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-669" y="1144"/>
+        </scene>
         <!--SignUp Screen-->
         <scene sceneID="9dz-F3-bgi">
             <objects>
@@ -190,6 +274,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock.fill" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
