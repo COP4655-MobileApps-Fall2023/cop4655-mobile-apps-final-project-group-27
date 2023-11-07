@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66F1211F2AFABD6F00D708C8 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66F1211E2AFABD6F00D708C8 /* ParseSwift */; };
+		66F121222AFABF2C00D708C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F121212AFABF2C00D708C8 /* User.swift */; };
 		A229B9382AF3179C00EB48CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229B9372AF3179C00EB48CA /* AppDelegate.swift */; };
 		A229B93A2AF3179C00EB48CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229B9392AF3179C00EB48CA /* SceneDelegate.swift */; };
 		A229B93C2AF3179C00EB48CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229B93B2AF3179C00EB48CA /* ViewController.swift */; };
@@ -17,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66F121212AFABF2C00D708C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A229B9342AF3179C00EB48CA /* NutriTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A229B9372AF3179C00EB48CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A229B9392AF3179C00EB48CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,12 +36,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F1211F2AFABD6F00D708C8 /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66F121202AFABE9C00D708C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66F121212AFABF2C00D708C8 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A229B92B2AF3179C00EB48CA = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +73,7 @@
 				A229B9372AF3179C00EB48CA /* AppDelegate.swift */,
 				A229B9392AF3179C00EB48CA /* SceneDelegate.swift */,
 				A229B93B2AF3179C00EB48CA /* ViewController.swift */,
+				66F121202AFABE9C00D708C8 /* Models */,
 				A2757E512AF9716E00915240 /* Login */,
 				A229B93D2AF3179C00EB48CA /* Main.storyboard */,
 				A2757E522AF9739400915240 /* SignUpViewController.swift */,
@@ -94,6 +107,9 @@
 			dependencies = (
 			);
 			name = NutriTrack;
+			packageProductDependencies = (
+				66F1211E2AFABD6F00D708C8 /* ParseSwift */,
+			);
 			productName = NutriTrack;
 			productReference = A229B9342AF3179C00EB48CA /* NutriTrack.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +138,9 @@
 				Base,
 			);
 			mainGroup = A229B92B2AF3179C00EB48CA;
+			packageReferences = (
+				66F1211D2AFABD6F00D708C8 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+			);
 			productRefGroup = A229B9352AF3179C00EB48CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -152,6 +171,7 @@
 				A229B93C2AF3179C00EB48CA /* ViewController.swift in Sources */,
 				A229B9382AF3179C00EB48CA /* AppDelegate.swift in Sources */,
 				A2757E532AF9739400915240 /* SignUpViewController.swift in Sources */,
+				66F121222AFABF2C00D708C8 /* User.swift in Sources */,
 				A229B93A2AF3179C00EB48CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66F1211D2AFABD6F00D708C8 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/netreconlab/Parse-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66F1211E2AFABD6F00D708C8 /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66F1211D2AFABD6F00D708C8 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A229B92C2AF3179C00EB48CA /* Project object */;
 }
