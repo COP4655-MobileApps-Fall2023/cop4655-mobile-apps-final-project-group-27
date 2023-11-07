@@ -20,7 +20,7 @@
                                 <rect key="frame" x="16" y="250.33333333333334" width="361" height="351.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NutriTrack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-YP-NBZ">
-                                        <rect key="frame" x="54.666666666666686" y="0.0" width="251.66666666666663" height="102.66666666666667"/>
+                                        <rect key="frame" x="54.666666666666671" y="0.0" width="251.66666666666663" height="102.66666666666667"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="64"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -167,7 +167,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="smk-bb-P7G">
             <objects>
-                <tabBarController id="1ik-Jg-Lxp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="FeedNavigationController" id="1ik-Jg-Lxp" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="msx-sc-rkN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -260,7 +260,7 @@
         <!--Navigation Controller-->
         <scene sceneID="pnj-Gu-Xld">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q22-hZ-Gmw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Q22-hZ-Gmw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dpj-fe-Xxo">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
