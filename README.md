@@ -49,15 +49,15 @@ NutriTrack is a user-friendly and comprehensive calorie tracking app designed to
 
 ### 2. Screen Archetypes
 
-- [ ] Login Screen
+- [x] Login Screen
 *- User can login*
-- [ ] Registration Screen
+- [x] Registration Screen
 *- User can register a new account*
-- [ ] Dashboard Screen
+- [x] Dashboard Screen
 *- User can track how they are doing in terms of reaching their daily calorie goal*
 - [ ] Food-logging Screen
 *- User can input what food they have eaten throughout the day or check the nutrition facts on certain meals*
-- [ ] Account Screen
+- [x] Account Screen
 *- User can update information about their account including goals and other vital information*
 - [ ] Food History Screen
 *- User can find information about their recent meals and the calories associated with them*
@@ -73,9 +73,9 @@ NutriTrack is a user-friendly and comprehensive calorie tracking app designed to
 
 **Flow Navigation** (Screen to Screen)
 
-- [ ] Login Screen
+- [x] Login Screen
 *- => Home Screen*
-- [ ] Registration Screen
+- [x] Registration Screen
 *- => Home Screen*
 - [ ] Food Database / Enter a Food Screen
 *- => Home Screen (After you select food from the databse)*
