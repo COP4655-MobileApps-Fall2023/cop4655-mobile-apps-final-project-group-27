@@ -89,6 +89,14 @@ NutriTrack is a user-friendly and comprehensive calorie tracking app designed to
 [Add picture of your hand sketched wireframes in this section]
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>![](https://hackmd.io/_uploads/Hkem8oSMa.png)
 
+<div>
+    <a href="https://www.loom.com/share/2624bb5916d846458afa6dc513255b14">
+    </a>
+    <a href="https://www.loom.com/share/2624bb5916d846458afa6dc513255b14">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/2624bb5916d846458afa6dc513255b14-with-play.gif">
+    </a>
+  </div>
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
