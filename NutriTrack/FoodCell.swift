@@ -9,6 +9,10 @@ import UIKit
 
 class FoodCell: UITableViewCell {
 
+    func configure(with food: Food){
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
