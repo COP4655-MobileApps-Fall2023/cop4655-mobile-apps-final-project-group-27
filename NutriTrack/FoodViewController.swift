@@ -8,9 +8,18 @@
 import UIKit
 
 class FoodViewController: UIViewController, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foods.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell", for: indexPath) as! FoodCell
+        let food = foods[indexPath.row]
+        cell.configure(with: food)
+        return cell
+        
+    }
+    
     
     
     var foods: [Food] = []
@@ -21,7 +30,7 @@ class FoodViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         tableView.dataSource = self
-        let url = URL(string: "https://api.api-ninjas.com/v1/nutrition?api_key=tbEafwFQI9W9kIv5bsOrmQ==yoRVsBUsVg6pXXTQ")!
+        let url = URL(string: "https://api.api-ninjas.com/v1/nutrition?query=brisket")!
         let request = URLRequest(url:url)
         let task = URLSession.shared.dataTask(with: request){ [weak self] data, response, error in
             
@@ -30,9 +39,10 @@ class FoodViewController: UIViewController, UITableViewDataSource {
             }
             guard let data = data else{
                 print("❌ Data is nil")
+                return
             }
+            let decoder = JSONDecoder()
             do {
-                let decoder = JSONDecoder()
                 let response = try decoder.decode(FoodsResponse.self, from: data)
                 let foods = response.results
                 DispatchQueue.main.async {
@@ -61,13 +71,4 @@ class FoodViewController: UIViewController, UITableViewDataSource {
     */
 
 }
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return foods.count
-}
 
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell", for: indexPath) as! FoodCell
-    let food = foods[indexPath.row]
-    cell.configure(with: food)
-    return cell
-}

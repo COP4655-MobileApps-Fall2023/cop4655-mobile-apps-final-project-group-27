@@ -181,6 +181,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodcalorie" destination="g2s-6Z-oWJ" id="7Bz-Th-57l"/>
+                                            <outlet property="foodname" destination="ZUJ-wu-pzk" id="Wiv-Tn-i77"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

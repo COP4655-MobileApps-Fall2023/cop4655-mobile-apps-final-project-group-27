@@ -13,6 +13,6 @@ struct FoodsResponse: Decodable{
 
 struct Food: Decodable{
     let name: String
-    let calories: String
+    let calories: Double
     
 }
