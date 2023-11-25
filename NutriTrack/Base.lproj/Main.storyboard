@@ -80,14 +80,23 @@
                                     <constraint firstItem="mb6-th-TkK" firstAttribute="top" secondItem="UpO-YP-NBZ" secondAttribute="bottom" constant="28" id="qjo-h8-qdv"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="carrot.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nvu-La-KYq">
+                                <rect key="frame" x="30" y="69.333333333333329" width="333" height="181.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="W8O-ka-I1S"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Nvu-La-KYq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="Nij-x8-JIa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7oZ-ps-zgv" secondAttribute="trailing" constant="16" id="PRO-BR-KhU"/>
                             <constraint firstItem="7oZ-ps-zgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QfW-yT-C0O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nvu-La-KYq" secondAttribute="trailing" constant="30" id="VIh-l9-idu"/>
                             <constraint firstItem="7oZ-ps-zgv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bg6-7D-Uwt"/>
                             <constraint firstItem="7oZ-ps-zgv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eKP-8V-TN0"/>
+                            <constraint firstItem="Nvu-La-KYq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rr7-yj-5Kz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zZD-Vp-KK2"/>
@@ -98,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
         </scene>
         <!--History-->
         <scene sceneID="elj-Q7-D7B">
@@ -119,14 +128,57 @@
         <!--Profile-->
         <scene sceneID="jD2-jd-Cvn">
             <objects>
-                <viewController id="PEa-1r-LPv" sceneMemberID="viewController">
+                <viewController id="PEa-1r-LPv" customClass="ProfileViewController" customModule="NutriTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6IA-Ts-vVL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carrot.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zfc-ld-bom">
+                                <rect key="frame" x="30" y="88.333333333333329" width="333" height="201.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ab0-Cu-5pu"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="profile name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0p5-dy-5Ro">
+                                <rect key="frame" x="30" y="319" width="333" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="s7s-xT-lPV">
+                                <rect key="frame" x="73.333333333333329" y="406" width="246.66666666666669" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calorie Goal: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s85-wx-bMV">
+                                        <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="goal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4B-FT-Awt">
+                                        <rect key="frame" x="172.66666666666669" y="0.0" width="74" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aWP-pT-J5J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zfc-ld-bom" firstAttribute="leading" secondItem="aWP-pT-J5J" secondAttribute="leading" constant="30" id="1cY-MF-Oog"/>
+                            <constraint firstItem="aWP-pT-J5J" firstAttribute="trailing" secondItem="0p5-dy-5Ro" secondAttribute="trailing" constant="30" id="682-E4-kdG"/>
+                            <constraint firstItem="s7s-xT-lPV" firstAttribute="centerX" secondItem="6IA-Ts-vVL" secondAttribute="centerX" id="6x8-wV-bQD"/>
+                            <constraint firstItem="s7s-xT-lPV" firstAttribute="centerY" secondItem="6IA-Ts-vVL" secondAttribute="centerY" id="8q2-Hx-xG8"/>
+                            <constraint firstItem="aWP-pT-J5J" firstAttribute="trailing" secondItem="Zfc-ld-bom" secondAttribute="trailing" constant="30" id="bjh-k3-hPJ"/>
+                            <constraint firstItem="Zfc-ld-bom" firstAttribute="top" secondItem="aWP-pT-J5J" secondAttribute="top" constant="30" id="jYz-0S-kEI"/>
+                            <constraint firstItem="0p5-dy-5Ro" firstAttribute="leading" secondItem="aWP-pT-J5J" secondAttribute="leading" constant="30" id="mwM-qA-ee5"/>
+                            <constraint firstItem="0p5-dy-5Ro" firstAttribute="top" secondItem="Zfc-ld-bom" secondAttribute="bottom" constant="30" id="nmt-nf-54Z"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="sXt-7m-eWK"/>
+                    <connections>
+                        <outlet property="CalorieGoalField" destination="C4B-FT-Awt" id="wLE-xn-D2r"/>
+                        <outlet property="profileName" destination="0p5-dy-5Ro" id="xhI-6C-pSw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QP9-Bd-oQ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,16 +272,67 @@
         <!--Dashboard-->
         <scene sceneID="qd5-2v-dQh">
             <objects>
-                <viewController id="JTC-1v-52o" sceneMemberID="viewController">
+                <viewController id="JTC-1v-52o" customClass="DashboardViewController" customModule="NutriTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uLE-fI-CAy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="1300" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEE-36-lwY">
+                                <rect key="frame" x="50" y="209.00000000000003" width="293" height="99.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="CalorieCounter:" destination="tWv-59-KBh" eventType="editingDidEnd" id="Kpu-hF-3G6"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGi-ox-mzR">
+                                <rect key="frame" x="143.66666666666666" y="338.33333333333331" width="105.66666666666666" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="t6R-5v-VyP">
+                                <rect key="frame" x="30" y="424" width="333" height="4"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9T-8x-7fX">
+                                <rect key="frame" x="100" y="619" width="193" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Food">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="AddFoodButton:" destination="tWv-59-KBh" eventType="touchUpInside" id="xfW-N7-qn0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wTF-Ud-yfo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="trailing" secondItem="oEE-36-lwY" secondAttribute="trailing" constant="50" id="5tv-Oh-4wc"/>
+                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="trailing" secondItem="Q9T-8x-7fX" secondAttribute="trailing" constant="100" id="Fhv-i3-oaL"/>
+                            <constraint firstItem="oEE-36-lwY" firstAttribute="top" secondItem="wTF-Ud-yfo" secondAttribute="top" constant="150" id="JxU-1e-YkQ"/>
+                            <constraint firstItem="Q9T-8x-7fX" firstAttribute="centerX" secondItem="uLE-fI-CAy" secondAttribute="centerX" id="KIh-aX-RPq"/>
+                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="trailing" secondItem="t6R-5v-VyP" secondAttribute="trailing" constant="30" id="Mq8-ka-qIz"/>
+                            <constraint firstItem="RGi-ox-mzR" firstAttribute="top" secondItem="oEE-36-lwY" secondAttribute="bottom" constant="30" id="WD2-3e-LAT"/>
+                            <constraint firstItem="t6R-5v-VyP" firstAttribute="leading" secondItem="wTF-Ud-yfo" secondAttribute="leading" constant="30" id="bNR-9e-Udg"/>
+                            <constraint firstItem="RGi-ox-mzR" firstAttribute="centerX" secondItem="uLE-fI-CAy" secondAttribute="centerX" id="cEa-fb-Pl7"/>
+                            <constraint firstItem="oEE-36-lwY" firstAttribute="leading" secondItem="wTF-Ud-yfo" secondAttribute="leading" constant="50" id="cbW-ZO-Khk"/>
+                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="bottom" secondItem="Q9T-8x-7fX" secondAttribute="bottom" constant="100" id="pO1-01-M02"/>
+                            <constraint firstItem="t6R-5v-VyP" firstAttribute="centerY" secondItem="uLE-fI-CAy" secondAttribute="centerY" id="uKo-r7-7FL"/>
+                            <constraint firstItem="Q9T-8x-7fX" firstAttribute="leading" secondItem="wTF-Ud-yfo" secondAttribute="leading" constant="100" id="whD-D4-6B3"/>
+                            <constraint firstItem="t6R-5v-VyP" firstAttribute="centerX" secondItem="uLE-fI-CAy" secondAttribute="centerX" id="wkp-xE-fD0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" id="RSD-XI-WSd"/>
+                    <connections>
+                        <outlet property="AddFoodButton" destination="Q9T-8x-7fX" id="9r0-XS-GML"/>
+                        <outlet property="CalorieCount" destination="oEE-36-lwY" id="Z9l-5V-oxb"/>
+                        <outlet property="CalorieProgress" destination="t6R-5v-VyP" id="zqT-wg-pnD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfQ-5H-HDj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="tWv-59-KBh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-326" y="723"/>
         </scene>
@@ -307,14 +410,25 @@
                                     <constraint firstItem="1Ni-Xi-3wF" firstAttribute="leading" secondItem="tEC-5b-XPd" secondAttribute="leading" constant="16" id="k1E-gL-Uyx"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="carrot.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eQS-PS-JrY">
+                                <rect key="frame" x="30" y="69.333333333333329" width="333" height="181.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="nI1-m1-iAI"/>
+                                    <constraint firstAttribute="height" constant="180" id="vkj-xr-Yjh"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6oA-P7-WCz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tEC-5b-XPd" firstAttribute="leading" secondItem="6oA-P7-WCz" secondAttribute="leading" constant="16" id="1FY-vj-OKR"/>
+                            <constraint firstItem="eQS-PS-JrY" firstAttribute="top" secondItem="spK-Fy-qS8" secondAttribute="top" constant="70" id="DZp-MR-UIr"/>
+                            <constraint firstItem="6oA-P7-WCz" firstAttribute="trailing" secondItem="eQS-PS-JrY" secondAttribute="trailing" constant="30" id="Jrk-GH-zdT"/>
+                            <constraint firstItem="eQS-PS-JrY" firstAttribute="leading" secondItem="6oA-P7-WCz" secondAttribute="leading" constant="30" id="OD1-Mu-FtY"/>
                             <constraint firstItem="tEC-5b-XPd" firstAttribute="centerX" secondItem="spK-Fy-qS8" secondAttribute="centerX" id="ODL-vF-Cgq"/>
                             <constraint firstItem="tEC-5b-XPd" firstAttribute="centerY" secondItem="spK-Fy-qS8" secondAttribute="centerY" id="gB8-ka-5uL"/>
                             <constraint firstItem="6oA-P7-WCz" firstAttribute="trailing" secondItem="tEC-5b-XPd" secondAttribute="trailing" constant="16" id="mbN-c8-F2h"/>
+                            <constraint firstItem="eQS-PS-JrY" firstAttribute="centerX" secondItem="spK-Fy-qS8" secondAttribute="centerX" id="ymP-lF-LAl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="Tkt-Pw-Pbf"/>
@@ -414,11 +528,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="carrot.fill" catalog="system" width="128" height="122"/>
         <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
         <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="109"/>
+
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

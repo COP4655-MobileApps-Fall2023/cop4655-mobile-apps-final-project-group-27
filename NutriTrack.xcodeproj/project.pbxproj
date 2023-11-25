@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FA919682B0EC93D0059E969 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA919672B0EC93D0059E969 /* DashboardViewController.swift */; };
+		1FA9196A2B0ED1130059E969 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA919692B0ED1130059E969 /* ProfileViewController.swift */; };
 		66F1211F2AFABD6F00D708C8 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66F1211E2AFABD6F00D708C8 /* ParseSwift */; };
 		66F121222AFABF2C00D708C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F121212AFABF2C00D708C8 /* User.swift */; };
 		A229B9382AF3179C00EB48CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229B9372AF3179C00EB48CA /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FA919672B0EC93D0059E969 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		1FA919692B0ED1130059E969 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		66F121212AFABF2C00D708C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A229B9342AF3179C00EB48CA /* NutriTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A229B9372AF3179C00EB48CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				A2757E512AF9716E00915240 /* Login */,
 				A27C37222B0FF6C900061F7C /* Food.swift */,
 				A229B93D2AF3179C00EB48CA /* Main.storyboard */,
+				1FA919692B0ED1130059E969 /* ProfileViewController.swift */,
+				1FA919672B0EC93D0059E969 /* DashboardViewController.swift */,
 				A2757E522AF9739400915240 /* SignUpViewController.swift */,
 				A27C37202B0FF49900061F7C /* FoodViewController.swift */,
 				A27C37242B0FF97900061F7C /* FoodCell.swift */,
@@ -180,8 +186,10 @@
 				A27C37232B0FF6C900061F7C /* Food.swift in Sources */,
 				A27C37252B0FF97900061F7C /* FoodCell.swift in Sources */,
 				A229B93C2AF3179C00EB48CA /* ViewController.swift in Sources */,
+				1FA919682B0EC93D0059E969 /* DashboardViewController.swift in Sources */,
 				A229B9382AF3179C00EB48CA /* AppDelegate.swift in Sources */,
 				A2757E532AF9739400915240 /* SignUpViewController.swift in Sources */,
+				1FA9196A2B0ED1130059E969 /* ProfileViewController.swift in Sources */,
 				66F121222AFABF2C00D708C8 /* User.swift in Sources */,
 				A27C37212B0FF49900061F7C /* FoodViewController.swift in Sources */,
 				A229B93A2AF3179C00EB48CA /* SceneDelegate.swift in Sources */,
