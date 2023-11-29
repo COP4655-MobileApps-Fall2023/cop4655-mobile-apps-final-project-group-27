@@ -77,9 +77,9 @@ NutriTrack is a user-friendly and comprehensive calorie tracking app designed to
 *- => Home Screen*
 - [x] Registration Screen
 *- => Home Screen*
-- [ ] Food Database / Enter a Food Screen
+- [x] Food Database / Enter a Food Screen
 *- => Home Screen (After you select food from the databse)*
-- [ ] Profile Page
+- [x] Profile Page
 *- => Edit Profile Screen*
 *- => Profile Page (Once changes are saved)*
 
