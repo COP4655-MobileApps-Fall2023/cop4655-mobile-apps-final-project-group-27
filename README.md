@@ -97,6 +97,10 @@ NutriTrack is a user-friendly and comprehensive calorie tracking app designed to
     </a>
   </div>
 
+  Project Demo
+  <a href = "https://www.youtube.com/watch?v=Li0lw0t43dA&ab_channel=Dante">
+  </a>
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
