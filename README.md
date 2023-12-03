@@ -55,7 +55,7 @@ NutriTrack is a user-friendly and comprehensive calorie tracking app designed to
 *- User can register a new account*
 - [x] Dashboard Screen
 *- User can track how they are doing in terms of reaching their daily calorie goal*
-- [ ] Food-logging Screen
+- [x] Food-logging Screen
 *- User can input what food they have eaten throughout the day or check the nutrition facts on certain meals*
 - [x] Account Screen
 *- User can update information about their account including goals and other vital information*
@@ -77,9 +77,9 @@ NutriTrack is a user-friendly and comprehensive calorie tracking app designed to
 *- => Home Screen*
 - [x] Registration Screen
 *- => Home Screen*
-- [ ] Food Database / Enter a Food Screen
+- [x] Food Database / Enter a Food Screen
 *- => Home Screen (After you select food from the databse)*
-- [ ] Profile Page
+- [x] Profile Page
 *- => Edit Profile Screen*
 *- => Profile Page (Once changes are saved)*
 
@@ -95,6 +95,13 @@ NutriTrack is a user-friendly and comprehensive calorie tracking app designed to
     <a href="https://www.loom.com/share/2624bb5916d846458afa6dc513255b14">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/2624bb5916d846458afa6dc513255b14-with-play.gif">
     </a>
+  </div>
+
+  
+  <div>
+  <a href="https://www.youtube.com/watch?v=Li0lw0t43dA&ab_channel=Dante">
+      Project Demo
+  </a>
   </div>
 
 
