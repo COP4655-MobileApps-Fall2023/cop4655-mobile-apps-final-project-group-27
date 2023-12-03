@@ -2,7 +2,6 @@ import UIKit
 
 class FoodViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
 
-    // Your existing properties
     var foods: [Food] = []
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -18,11 +17,10 @@ class FoodViewController: UIViewController, UITableViewDataSource, UISearchBarDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Your existing implementation
         let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell", for: indexPath) as! FoodCell
-                let food = foods[indexPath.row]
-                cell.configure(with: food)
-                return cell
+        let food = foods[indexPath.row]
+        cell.configure(with: food)
+        return cell
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -53,39 +51,46 @@ class FoodViewController: UIViewController, UITableViewDataSource, UISearchBarDe
             print("Received data: \(String(describing: String(data: data, encoding: .utf8)))")
             let decoder = JSONDecoder()
             do {
-                        let foods = try JSONDecoder().decode([Food].self, from: data)
-                        
-                        // Construct a message with the results
-                        var resultsMessage = "Search Results:\n"
-                        for food in foods {
-                            resultsMessage += "\(food.name): \(food.calories) calories\n"
-                        }
-
-                        DispatchQueue.main.async {
-                            self?.foods = foods
-                            self?.tableView.reloadData()
-
-                            // Show the results in an alert
-                            self?.showAlert(message: resultsMessage)
-                        }
-                    } catch {
-                        DispatchQueue.main.async {
-                            self?.showAlert(message: "Error parsing JSON: \(error.localizedDescription)")
-                        }
+                let foods = try decoder.decode([Food].self, from: data)
+                DispatchQueue.main.async {
+                    self?.foods = foods
+                    self?.tableView.reloadData()
+                    // Assuming you want to show an alert for the first food item
+                    if let firstFood = foods.first {
+                        let message = "\(firstFood.name): \(firstFood.calories) calories"
+                        self?.showAlertWithAddOption(message: message, food: firstFood)
                     }
                 }
-                task.resume()
-            }
-
-            private func showAlert(message: String) {
-                let alert = UIAlertController(title: "Search Results", message: message, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            } catch {
                 DispatchQueue.main.async {
-                    self.present(alert, animated: true, completion: nil)
+                    self?.showAlertWithAddOption(message: "Error parsing JSON: \(error.localizedDescription)", food: Food(name: "", calories: 0))
                 }
             }
-    
+        }
+        task.resume()
+    }
 
+    private func showAlertWithAddOption(message: String, food: Food) {
+        let alert = UIAlertController(title: "Food Information", message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak self] _ in
+            self?.addFoodCalories(food)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 
-    // Rest of your code
+    private func addFoodCalories(_ food: Food) {
+        // Logic to add food calories to a different screen
+        // This could involve updating a model, sending a notification, etc.
+        // Example: self.performSegue(withIdentifier: "YourSegueIdentifier", sender: food)
+    }
+
+    // Rest of your code...
 }
+
+// Food struct and any other necessary classes...

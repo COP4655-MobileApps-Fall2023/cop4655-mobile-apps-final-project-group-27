@@ -192,7 +192,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ThI-cW-sqd">
+                            <searchBar contentMode="redraw" placeholder="What did you eat?" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ThI-cW-sqd">
                                 <rect key="frame" x="0.0" y="92" width="393" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7MI-na-qfm"/>
