@@ -22,6 +22,7 @@ struct User: ParseUser {
     var originalData: Data?
 
     // These are required by `ParseUser`.
+    var profilename: String?
     var username: String?
     var email: String?
     var emailVerified: Bool?
