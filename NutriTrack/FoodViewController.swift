@@ -88,6 +88,8 @@ class FoodViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         // Logic to add food calories to a different screen
         // This could involve updating a model, sending a notification, etc.
         // Example: self.performSegue(withIdentifier: "YourSegueIdentifier", sender: food)
+        
+        NotificationCenter.default.post(name: Notification.Name("AddCaloriesNotification"), object: nil, userInfo: ["calories": food.calories])
     }
 
     // Rest of your code...
