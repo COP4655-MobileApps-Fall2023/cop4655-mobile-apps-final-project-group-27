@@ -119,22 +119,6 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
         </scene>
-        <!--History-->
-        <scene sceneID="elj-Q7-D7B">
-            <objects>
-                <viewController id="KIL-Vz-kOw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="utg-6f-cJa">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="W1S-uf-s5C"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="History" image="clock.fill" catalog="system" id="k6c-UE-uTE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tCh-ZY-fRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1912" y="1987"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="jD2-jd-Cvn">
             <objects>
@@ -151,6 +135,7 @@
                             </imageView>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="profile name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0p5-dy-5Ro">
                                 <rect key="frame" x="30" y="319" width="333" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -323,7 +308,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="AddFoodButton:" destination="tWv-59-KBh" eventType="touchUpInside" id="xfW-N7-qn0"/>
+                                    <action selector="addFoodButtonTapped:" destination="JTC-1v-52o" eventType="touchUpInside" id="OC9-Xx-yT4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-oI-9iv" userLabel="Logout">
@@ -356,7 +341,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" id="RSD-XI-WSd"/>
                     <connections>
-                        <outlet property="AddFoodButton" destination="Q9T-8x-7fX" id="9r0-XS-GML"/>
                         <outlet property="calorieCountTextField" destination="oEE-36-lwY" id="6sD-js-KXK"/>
                         <outlet property="calorieProgressView" destination="t6R-5v-VyP" id="JdX-Fd-6Wr"/>
                         <outlet property="gradientView" destination="uLE-fI-CAy" id="EMo-em-DTm"/>
@@ -463,8 +447,6 @@
                         <segue destination="JTC-1v-52o" kind="relationship" relationship="viewControllers" id="8iZ-QK-px7"/>
                         <segue destination="OqI-9Y-HHR" kind="relationship" relationship="viewControllers" id="XFb-oR-BLg"/>
                         <segue destination="PEa-1r-LPv" kind="relationship" relationship="viewControllers" id="U3V-vb-VaI"/>
-                        <segue destination="KIL-Vz-kOw" kind="relationship" relationship="viewControllers" id="azA-iz-5ao"/>
-                        <segue destination="Kzq-uy-jhc" kind="relationship" relationship="viewControllers" id="J1I-Gl-Zzk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="je8-CF-jGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -581,79 +563,11 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--Food logging-->
-        <scene sceneID="hYs-s8-epc">
-            <objects>
-                <viewController id="Kzq-uy-jhc" userLabel="Food logging" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lJQ-fk-8jD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O8c-nz-GJc">
-                                <rect key="frame" x="121" y="296" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODAYS DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nta-9E-8pc">
-                                <rect key="frame" x="141" y="77" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GOAL + EXERCISE - FOOD = REMAINING CALORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W7-q0-dtN">
-                                <rect key="frame" x="-2" y="190" width="397" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bl-cv-Dln">
-                                <rect key="frame" x="57" y="392" width="39" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIX-DD-rxl">
-                                <rect key="frame" x="276" y="392" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCF-N1-fcS">
-                                <rect key="frame" x="56" y="593" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaE-lw-ItD">
-                                <rect key="frame" x="275" y="593" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Jjh-PM-8eS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Logging" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="JW8-ey-X7h"/>
-                    <navigationItem key="navigationItem" id="lxd-QQ-xpO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp3-EM-YVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2979.3893129770991" y="1409.8591549295775"/>
-        </scene>
     </scenes>
     <resources>
         <image name="carrot.fill" catalog="system" width="128" height="122"/>
-        <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
         <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="109"/>
         <image name="treatment_int_nutrition_hero" width="1200" height="630"/>
         <systemColor name="labelColor">

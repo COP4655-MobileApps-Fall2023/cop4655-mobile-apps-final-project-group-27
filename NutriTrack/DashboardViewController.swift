@@ -21,7 +21,17 @@ class DashboardViewController: UIViewController {
     private var currentCalorieIntake: Double = 0
     
     
-    @IBOutlet weak var AddFoodButton: UIButton!
+   
+    
+    @IBAction func addFoodButtonTapped(_ sender: Any) {
+        
+        if let tabBarController = self.tabBarController {
+                    tabBarController.selectedIndex = 1 // Index of FoodViewController
+                }
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUserCaloricGoal()
