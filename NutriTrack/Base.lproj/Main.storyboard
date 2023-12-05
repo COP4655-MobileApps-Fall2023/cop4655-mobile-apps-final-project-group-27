@@ -127,8 +127,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carrot.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zfc-ld-bom">
-                                <rect key="frame" x="30" y="88.333333333333329" width="333" height="201.66666666666669"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treatment_int_nutrition_hero" translatesAutoresizingMaskIntoConstraints="NO" id="Zfc-ld-bom">
+                                <rect key="frame" x="30" y="89" width="333" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="ab0-Cu-5pu"/>
                                 </constraints>
@@ -181,6 +181,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="sXt-7m-eWK"/>
                     <connections>
                         <outlet property="CalorieGoalField" destination="C4B-FT-Awt" id="wLE-xn-D2r"/>
+                        <outlet property="circularImageView" destination="Zfc-ld-bom" id="loZ-Em-Jje"/>
                         <outlet property="gradientView" destination="6IA-Ts-vVL" id="WYr-CJ-DTk"/>
                         <outlet property="profileName" destination="0p5-dy-5Ro" id="xhI-6C-pSw"/>
                     </connections>
@@ -245,28 +246,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmQ-TB-7UG">
-                                <rect key="frame" x="159" y="711" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DAf-5L-3td"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NmQ-TB-7UG" firstAttribute="centerX" secondItem="PGy-f9-fDT" secondAttribute="centerX" id="Ckx-Hr-fOc"/>
                             <constraint firstItem="c7q-zE-AmD" firstAttribute="top" secondItem="ThI-cW-sqd" secondAttribute="bottom" id="GOw-tw-afl"/>
-                            <constraint firstItem="DAf-5L-3td" firstAttribute="bottom" secondItem="NmQ-TB-7UG" secondAttribute="bottom" constant="23" id="NVk-Ee-W3Z"/>
                             <constraint firstAttribute="trailing" secondItem="c7q-zE-AmD" secondAttribute="trailing" id="Syo-G8-yOT"/>
                             <constraint firstItem="c7q-zE-AmD" firstAttribute="leading" secondItem="PGy-f9-fDT" secondAttribute="leading" id="at2-Jq-Rn1"/>
-                            <constraint firstItem="NmQ-TB-7UG" firstAttribute="top" secondItem="c7q-zE-AmD" secondAttribute="bottom" id="frc-DN-i1q"/>
                             <constraint firstItem="ThI-cW-sqd" firstAttribute="centerX" secondItem="PGy-f9-fDT" secondAttribute="centerX" id="ife-MH-2l0"/>
                             <constraint firstItem="ThI-cW-sqd" firstAttribute="top" secondItem="DAf-5L-3td" secondAttribute="top" constant="33" id="k26-D3-2II"/>
                             <constraint firstItem="ThI-cW-sqd" firstAttribute="leading" secondItem="c7q-zE-AmD" secondAttribute="leading" id="lbj-oa-Gls"/>
+                            <constraint firstItem="DAf-5L-3td" firstAttribute="bottom" secondItem="c7q-zE-AmD" secondAttribute="bottom" constant="58" id="vvJ-P5-ktC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Food" image="takeoutbag.and.cup.and.straw.fill" catalog="system" id="tsk-kJ-eIA"/>
                     <connections>
+                        <outlet property="gradientView" destination="PGy-f9-fDT" id="G5f-q3-nn9"/>
                         <outlet property="searchBar" destination="ThI-cW-sqd" id="e58-sL-a7P"/>
                         <outlet property="tableView" destination="c7q-zE-AmD" id="Jt6-jN-gzr"/>
                     </connections>
@@ -565,7 +560,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="carrot.fill" catalog="system" width="128" height="122"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="109"/>

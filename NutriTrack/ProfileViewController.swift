@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var circularImageView: UIImageView!
     @IBOutlet weak var profileName: UITextField!
     
     @IBOutlet weak var CalorieGoalField: UITextField!
@@ -32,8 +33,9 @@ class ProfileViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
         gradientView.layer.insertSublayer(gradientLayer, at: 0)
-
         
+        circularImageView.layer.cornerRadius = circularImageView.frame.size.width / 2
+        circularImageView.clipsToBounds = true
         /*
          // MARK: - Navigation
          
