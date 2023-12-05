@@ -41,8 +41,8 @@ class ViewController: UIViewController {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = gradientView.bounds
         // Set your hex color codes
-        let startColor = UIColor(hex: "#9F025E").cgColor
-        let endColor = UIColor(hex: "#F9C929").cgColor
+        let startColor = UIColor(hex: "#DA6085").cgColor
+        let endColor = UIColor(hex: "#D7EDE2").cgColor
         gradientLayer.colors = [startColor , endColor]
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
