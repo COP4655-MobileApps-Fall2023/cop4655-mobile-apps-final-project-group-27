@@ -16,11 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eID-Ci-kwF">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="7oZ-ps-zgv" userLabel="Main Stack">
                                 <rect key="frame" x="16" y="250.33333333333334" width="361" height="351.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NutriTrack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-YP-NBZ">
-                                        <rect key="frame" x="54.666666666666686" y="0.0" width="251.66666666666663" height="102.66666666666667"/>
+                                        <rect key="frame" x="54.666666666666671" y="0.0" width="251.66666666666663" height="102.66666666666667"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="64"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -80,8 +85,8 @@
                                     <constraint firstItem="mb6-th-TkK" firstAttribute="top" secondItem="UpO-YP-NBZ" secondAttribute="bottom" constant="28" id="qjo-h8-qdv"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="carrot.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nvu-La-KYq">
-                                <rect key="frame" x="30" y="69.333333333333329" width="333" height="181.66666666666669"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="treatment_int_nutrition_hero" translatesAutoresizingMaskIntoConstraints="NO" id="Nvu-La-KYq">
+                                <rect key="frame" x="30" y="70" width="333" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="W8O-ka-I1S"/>
                                 </constraints>
@@ -101,6 +106,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="zZD-Vp-KK2"/>
                     <connections>
+                        <outlet property="circularImageView" destination="Nvu-La-KYq" id="21u-yI-oi2"/>
+                        <outlet property="gradientView" destination="eID-Ci-kwF" id="qCt-xe-RQd"/>
                         <outlet property="password_field" destination="ndo-ka-yjD" id="DWS-rt-TQj"/>
                         <outlet property="username_field" destination="aQM-N8-b6l" id="YcV-qJ-1gN"/>
                     </connections>
@@ -145,7 +152,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="s7s-xT-lPV">
-                                <rect key="frame" x="73.333333333333314" y="406" width="246.66666666666669" height="40"/>
+                                <rect key="frame" x="73.333333333333329" y="406" width="246.66666666666669" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calorie Goal: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s85-wx-bMV">
                                         <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="40"/>
@@ -380,7 +387,7 @@
                                 <rect key="frame" x="16" y="256.66666666666669" width="361" height="339.00000000000006"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NutriTrack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctY-3s-rx8">
-                                        <rect key="frame" x="54.666666666666686" y="0.0" width="251.66666666666663" height="102.66666666666667"/>
+                                        <rect key="frame" x="54.666666666666671" y="0.0" width="251.66666666666663" height="102.66666666666667"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="64"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -544,6 +551,7 @@
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
         <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="109"/>
+        <image name="treatment_int_nutrition_hero" width="1200" height="630"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

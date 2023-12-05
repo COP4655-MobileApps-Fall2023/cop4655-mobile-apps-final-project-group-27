@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var username_field: UITextField!
     
+    @IBOutlet weak var gradientView: UIView!
+    
+    @IBOutlet weak var circularImageView: UIImageView!
+    
     @IBAction func onLoginTapped(_ sender: Any) {
         guard let username = username_field.text,
               let password = password_field.text,
@@ -31,9 +35,22 @@ class ViewController: UIViewController {
         }
     }
     @IBOutlet weak var password_field: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.bounds
+        // Set your hex color codes
+        let startColor = UIColor(hex: "#9F025E").cgColor
+        let endColor = UIColor(hex: "#F9C929").cgColor
+        gradientLayer.colors = [startColor , endColor]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientView.layer.insertSublayer(gradientLayer, at: 0)
+        
+        circularImageView.layer.cornerRadius = circularImageView.frame.size.width / 2
+        circularImageView.clipsToBounds = true
+        
     }
 
     
@@ -51,4 +68,19 @@ class ViewController: UIViewController {
            present(alertController, animated: true)
        }
 }
+extension UIColor{
+    convenience init(hex: String) {
+            var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+            hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+
+            var rgb: UInt64 = 0
+
+            Scanner(string: hexSanitized).scanHexInt64(&rgb)
+
+            let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+            let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+            let blue = CGFloat(rgb & 0x0000FF) / 255.0
+
+            self.init(red: red, green: green, blue: blue, alpha: 1.0)
+        }}
 
