@@ -296,23 +296,22 @@
                                 <rect key="frame" x="30" y="424" width="333" height="4"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9T-8x-7fX">
-                                <rect key="frame" x="100" y="619" width="193" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6W-p8-4jg">
+                                <rect key="frame" x="140" y="59" width="113" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add Food">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" title="Log Out"/>
                                 <connections>
-                                    <action selector="addFoodButtonTapped:" destination="JTC-1v-52o" eventType="touchUpInside" id="OC9-Xx-yT4"/>
+                                    <action selector="onLogOutTapped:" destination="JTC-1v-52o" eventType="touchUpInside" id="Qu9-Z9-CLa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-oI-9iv" userLabel="Logout">
-                                <rect key="frame" x="155" y="66" width="82" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjs-YR-YnR">
+                                <rect key="frame" x="60" y="613" width="273" height="56"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Add Food">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="onLogOutTapped:" destination="JTC-1v-52o" eventType="touchUpInside" id="3Eb-uC-afg"/>
+                                    <action selector="addFoodButtonTapped:" destination="JTC-1v-52o" eventType="touchUpInside" id="olb-nB-mrc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -320,18 +319,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wTF-Ud-yfo" firstAttribute="trailing" secondItem="oEE-36-lwY" secondAttribute="trailing" constant="50" id="5tv-Oh-4wc"/>
-                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="trailing" secondItem="Q9T-8x-7fX" secondAttribute="trailing" constant="100" id="Fhv-i3-oaL"/>
+                            <constraint firstItem="Vjs-YR-YnR" firstAttribute="centerX" secondItem="uLE-fI-CAy" secondAttribute="centerX" id="Chx-z4-e5L"/>
                             <constraint firstItem="oEE-36-lwY" firstAttribute="top" secondItem="wTF-Ud-yfo" secondAttribute="top" constant="150" id="JxU-1e-YkQ"/>
-                            <constraint firstItem="Q9T-8x-7fX" firstAttribute="centerX" secondItem="uLE-fI-CAy" secondAttribute="centerX" id="KIh-aX-RPq"/>
+                            <constraint firstItem="Vjs-YR-YnR" firstAttribute="leading" secondItem="wTF-Ud-yfo" secondAttribute="leading" constant="60" id="KZk-Kf-jh7"/>
                             <constraint firstItem="wTF-Ud-yfo" firstAttribute="trailing" secondItem="t6R-5v-VyP" secondAttribute="trailing" constant="30" id="Mq8-ka-qIz"/>
+                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="trailing" secondItem="Vjs-YR-YnR" secondAttribute="trailing" constant="60" id="REi-QG-QwD"/>
+                            <constraint firstItem="p6W-p8-4jg" firstAttribute="centerX" secondItem="uLE-fI-CAy" secondAttribute="centerX" id="UJ8-vs-Chh"/>
                             <constraint firstItem="RGi-ox-mzR" firstAttribute="top" secondItem="oEE-36-lwY" secondAttribute="bottom" constant="30" id="WD2-3e-LAT"/>
+                            <constraint firstItem="p6W-p8-4jg" firstAttribute="leading" secondItem="wTF-Ud-yfo" secondAttribute="leading" constant="140" id="a8c-Sr-pbn"/>
+                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="bottom" secondItem="Vjs-YR-YnR" secondAttribute="bottom" constant="100" id="bMl-qo-3Es"/>
                             <constraint firstItem="t6R-5v-VyP" firstAttribute="leading" secondItem="wTF-Ud-yfo" secondAttribute="leading" constant="30" id="bNR-9e-Udg"/>
                             <constraint firstItem="RGi-ox-mzR" firstAttribute="centerX" secondItem="uLE-fI-CAy" secondAttribute="centerX" id="cEa-fb-Pl7"/>
                             <constraint firstItem="oEE-36-lwY" firstAttribute="leading" secondItem="wTF-Ud-yfo" secondAttribute="leading" constant="50" id="cbW-ZO-Khk"/>
-                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="bottom" secondItem="Q9T-8x-7fX" secondAttribute="bottom" constant="100" id="pO1-01-M02"/>
+                            <constraint firstItem="p6W-p8-4jg" firstAttribute="top" secondItem="wTF-Ud-yfo" secondAttribute="top" id="hDG-3p-I6d"/>
                             <constraint firstItem="t6R-5v-VyP" firstAttribute="centerY" secondItem="uLE-fI-CAy" secondAttribute="centerY" id="uKo-r7-7FL"/>
-                            <constraint firstItem="Q9T-8x-7fX" firstAttribute="leading" secondItem="wTF-Ud-yfo" secondAttribute="leading" constant="100" id="whD-D4-6B3"/>
                             <constraint firstItem="t6R-5v-VyP" firstAttribute="centerX" secondItem="uLE-fI-CAy" secondAttribute="centerX" id="wkp-xE-fD0"/>
+                            <constraint firstItem="wTF-Ud-yfo" firstAttribute="trailing" secondItem="p6W-p8-4jg" secondAttribute="trailing" constant="140" id="ycB-XV-TZU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" id="RSD-XI-WSd"/>
@@ -344,7 +347,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfQ-5H-HDj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="tWv-59-KBh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-326" y="723"/>
+            <point key="canvasLocation" x="-327.48091603053433" y="722.53521126760563"/>
         </scene>
         <!--Create Profile View Controller-->
         <scene sceneID="x8K-E0-ugz">
