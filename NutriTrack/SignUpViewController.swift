@@ -41,10 +41,24 @@ class SignUpViewController: UIViewController {
             
         }
     }
+    
+    @IBOutlet weak var gradientView: UIView!
+    
+    @IBOutlet weak var circularImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.bounds
+        // Set your hex color codes
+        let startColor = UIColor(hex: "#DA6085").cgColor
+        let endColor = UIColor(hex: "#D7EDE2").cgColor
+        gradientLayer.colors = [startColor , endColor]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientView.layer.insertSublayer(gradientLayer, at: 0)
+        
+        circularImageView.layer.cornerRadius = circularImageView.frame.size.width / 2
+        circularImageView.clipsToBounds = true
     }
     
 
