@@ -196,6 +196,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="sXt-7m-eWK"/>
                     <connections>
                         <outlet property="CalorieGoalField" destination="C4B-FT-Awt" id="wLE-xn-D2r"/>
+                        <outlet property="gradientView" destination="6IA-Ts-vVL" id="WYr-CJ-DTk"/>
                         <outlet property="profileName" destination="0p5-dy-5Ro" id="xhI-6C-pSw"/>
                     </connections>
                 </viewController>
@@ -358,6 +359,7 @@
                         <outlet property="AddFoodButton" destination="Q9T-8x-7fX" id="9r0-XS-GML"/>
                         <outlet property="calorieCountTextField" destination="oEE-36-lwY" id="6sD-js-KXK"/>
                         <outlet property="calorieProgressView" destination="t6R-5v-VyP" id="JdX-Fd-6Wr"/>
+                        <outlet property="gradientView" destination="uLE-fI-CAy" id="EMo-em-DTm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfQ-5H-HDj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -439,6 +441,7 @@
                         <outlet property="currentWeightTextField" destination="nMy-hs-ohG" id="bxf-5O-p38"/>
                         <outlet property="genderPicker" destination="aIU-iz-pbq" id="U35-Z9-grW"/>
                         <outlet property="goalWeightTextField" destination="sIr-Mw-3Y2" id="UXR-Tg-QbI"/>
+                        <outlet property="gradientView" destination="OZS-Tu-8rG" id="Irn-kT-uBN"/>
                         <outlet property="heightPicker" destination="Qkp-Oy-6Lb" id="y0B-65-8oj"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var calorieCountTextField: UITextField!
     
+    @IBOutlet var gradientView: UIView!
     
     @IBOutlet weak var calorieProgressView: UIProgressView!
     
@@ -27,6 +28,17 @@ class DashboardViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(handleCalorieAddition(_:)), name: Notification.Name("AddCaloriesNotification"), object: nil)
         // Do any additional setup after loading the view.
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.bounds
+        // Set your hex color codes
+        let startColor = UIColor(hex: "#DA6085").cgColor
+        let endColor = UIColor(hex: "#D7EDE2").cgColor
+        gradientLayer.colors = [startColor , endColor]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientView.layer.insertSublayer(gradientLayer, at: 0)
+
     }
     
     

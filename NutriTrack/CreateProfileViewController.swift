@@ -37,7 +37,8 @@ class CreateProfileViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     @IBOutlet weak var goalWeightTextField: UITextField!
     
-  
+    @IBOutlet var gradientView: UIView!
+    
   
     @IBOutlet weak var ageTextField: UITextField!
     let genders = ["Male", "Female"]
@@ -52,6 +53,18 @@ class CreateProfileViewController: UIViewController, UIPickerViewDelegate, UIPic
         heightPicker.delegate = self
         heightPicker.dataSource = self
         // Additional setup...
+        
+        
+        //gradient code
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.bounds
+        // Set your hex color codes
+        let startColor = UIColor(hex: "#DA6085").cgColor
+        let endColor = UIColor(hex: "#D7EDE2").cgColor
+        gradientLayer.colors = [startColor , endColor]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientView.layer.insertSublayer(gradientLayer, at: 0)
     }
 
     @IBAction func submitProfileDetails(_ sender: UIButton) {

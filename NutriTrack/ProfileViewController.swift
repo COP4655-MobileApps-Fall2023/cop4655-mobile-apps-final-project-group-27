@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var CalorieGoalField: UITextField!
     
+    @IBOutlet var gradientView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,16 @@ class ProfileViewController: UIViewController {
             
             // Do any additional setup after loading the view.
         }
-        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.bounds
+        // Set your hex color codes
+        let startColor = UIColor(hex: "#DA6085").cgColor
+        let endColor = UIColor(hex: "#D7EDE2").cgColor
+        gradientLayer.colors = [startColor , endColor]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientView.layer.insertSublayer(gradientLayer, at: 0)
+
         
         /*
          // MARK: - Navigation
