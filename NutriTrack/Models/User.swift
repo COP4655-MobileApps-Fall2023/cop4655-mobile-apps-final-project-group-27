@@ -35,6 +35,8 @@ struct User: ParseUser {
     var currentWeight: Double?  // in pounds
     var goalWeight: Double?  // in pounds
     var age: Int?
+    var currentCalorieIntake: Double?
+
 
     // Computed properties for BMI and daily caloric goal
     var bmi: Double? {
