@@ -87,16 +87,16 @@ class CreateProfileViewController: UIViewController, UIPickerViewDelegate, UIPic
                 let dailyCaloricGoal = currentUser.dailyCaloricGoal
                 
                 currentUser.save { result in
-                    switch result {
-                    case .success:
-                        print("User profile updated successfully. Daily Caloric Goal: \(dailyCaloricGoal ?? 0)")
-                        // Navigate to another view or show success message
-                    case .failure(let error):
-                        print("Error updating user: \(error.localizedDescription)")
-                        // Show error message
+                            switch result {
+                            case .success:
+                                print("User profile updated successfully. Daily Caloric Goal: \(currentUser.dailyCaloricGoal ?? 0)")
+                                // Post a notification
+                                NotificationCenter.default.post(name: Notification.Name("UserProfileUpdated"), object: nil)
+                            case .failure(let error):
+                                print("Error updating user: \(error.localizedDescription)")
+                            }
+                        }
                     }
-                }
-            }
         
         self.dismiss(animated: true, completion: nil)
         }

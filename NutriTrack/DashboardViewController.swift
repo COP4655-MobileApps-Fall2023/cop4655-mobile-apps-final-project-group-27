@@ -33,7 +33,14 @@ class DashboardViewController: UIViewController {
         fetchUserCaloricGoal()
         setupGradientView()
         NotificationCenter.default.addObserver(self, selector: #selector(handleCalorieAddition(_:)), name: Notification.Name("AddCaloriesNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(userProfileUpdated(_:)), name: Notification.Name("UserProfileUpdated"), object: nil)
     }
+    
+    @objc private func userProfileUpdated(_ notification: Notification) {
+            fetchUserCaloricGoal()
+        }
+
+    
 
     @objc private func handleCalorieAddition(_ notification: Notification) {
         if let calories = notification.userInfo?["calories"] as? Double {
